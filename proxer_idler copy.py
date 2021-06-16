@@ -72,7 +72,7 @@ def captcha_solver():
     global solved_captcha
     data_sitekey = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CLASS_NAME, "g-recaptcha"))).get_attribute("data-sitekey")
 
-    api_key = os.getenv('APIKEY_2CAPTCHA', 'api_key')
+    api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_APIKEY_HERE')
 
     solver = TwoCaptcha(api_key)
 
